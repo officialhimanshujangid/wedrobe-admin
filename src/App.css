@@ -1,0 +1,110 @@
+
+body , html , #root{
+  overflow: hidden;
+
+}
+
+
+
+
+/* Custom styles for the horizontal scrollbar */
+.x-scrollbar-custom {
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* WebKit browsers (Chrome, Safari) */
+.x-scrollbar-custom::-webkit-scrollbar {
+  height: 0px; /* Height of the scrollbar */
+}
+
+.x-scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.x-scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Color on hover */
+}
+
+.x-scrollbar-custom::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Color of the track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Firefox */
+.x-scrollbar-custom {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.2); /* Thumb and track colors */
+}
+
+
+.hideScrollbar {
+  overflow: hidden; /* Hides the scrollbar */
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.hideScrollbar::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+/* If you want to still scroll, use overflow: auto; */
+.scrollableContainer {
+  overflow: auto; /* Allows scrolling */
+}
+
+
+
+
+
+
+/* 
+.product-info-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.image-section {
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.uploaded-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-details {
+  width: 65%;
+}
+
+.product-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-name h2, .product-name input {
+  flex: 1;
+}
+
+.specifications {
+  margin-top: 20px;
+}
+
+.spec-additional {
+  margin-top: 20px;
+}
+
+ */

@@ -1,0 +1,10 @@
+this is code setup in react 
+using : 
+api's
+rizzui Ui
+reduxjs/toolkit
+tailwindcss postcss autoprefixer
+vite@latest
+react-toastify
+singlePageAPICall
+run code : npm run dev
