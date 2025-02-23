@@ -205,39 +205,14 @@ const Login = () => {
         // email:email,
         // password:password,
         //         }
-        dispatch(loginUser(reqData));
+        demoLogin(reqData)
     };
 
-const demoLogin  = ()=>{
+const demoLogin  = (reqData)=>{
     localStorage.setItem("user" , JSON.stringify({
-        "username": "test",
-        "balance": 16,
-        "userId": "661795add4d452b575ad9b54",
-        "userType": "client",
-        "isPasswordChanged": true,
-        "userPriority": 1,
-        "name": "test",
-        "matchShare": 0,
-        "matchCommission": 0,
-        "sessionCommission": 0,
-        "casinoShare": 0,
-        "casinoCommission": 0,
-        "userCount": {},
-        "casinoStatus": true,
-        "intCasinoStatus": true,
-        "intCasinoMultiply": 1,
-        "betChipsData": {
-            "1000": 100,
-            "2000": 2000,
-            "5000": 5000,
-            "10000": 10000,
-            "20000": 20000,
-            "50000": 50000,
-            "100000": 100000,
-            "250000": 250000
-        },
-        "rateReffrence": 0.01
+        "username": reqData?.username ?? "test",
     }))
+    localStorage.setItem("token" , 'hvbfvhfvvfvhjfsfvjkshfgvhsgvlhslvhg')
     localStorage.setItem("token" , "demooooooToken")
     navigate('/dashboard')
 }
@@ -284,7 +259,7 @@ const demoLogin  = ()=>{
                                     type="input"
                                     size="xl"
                                     label="Email"
-                                    // defaultValue={"test"}
+                                    defaultValue={"test"}
                                     placeholder="Enter your email"
                                     className="[&>label>span]:font-medium [&>label>span]:text-white"
                                     {...register('username', { required: "Email is required" })}
@@ -294,7 +269,7 @@ const demoLogin  = ()=>{
                                 <Password
                                     label="Password"
                                     placeholder="Enter your password"
-                                    // defaultValue={"123456"}
+                                    defaultValue={"123456"}
                                     size="xl"
                                     className="[&>label>span]:font-medium [&>label>span]:text-white"
                                     {...register('password', { required: "Password is required" })}
