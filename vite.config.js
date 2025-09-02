@@ -1,17 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-// // https://vitejs.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-// })
-
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  base: '/', // 👈 This is important for Netlify
   plugins: [react()],
   server: {
     hmr: true,
-    host: true, // This allows Vite to accept external connections
+    host: true,
     port: 5173,
   },
 });
